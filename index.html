@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="target"></h1>
+    <p id="target2"></p>
+</body>
+
+
+<script type="module">
+    import a from './index.js';
+
+    window.onload = () => {
+        const auto = new window.TextAutoInput({
+            el: '#target',
+            text: '这是一段自动输入的文本演示，还有更长的文本测试，还有更长的文本测试，还有更长的文本测试，还有更长的文本测试，还有更长的文本测试还有更长的文本测试，还有更长的文本测试还有更长的文本测试',
+            loop: false,
+            speed: 300,
+        });
+
+        auto.render();
+
+        const auto2 = new window.TextAutoInput({
+            el: '#target2',
+            text: 'This is a auto input text with testing',
+            loop: false,
+            speed: 2000,
+        });
+
+        auto2.render();
+    }
+</script>
+</html>
