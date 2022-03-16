@@ -1,0 +1,27 @@
+{
+  "name": "typer-text",
+  "version": "1.0.1",
+  "description": "A javascript library to render text as typer",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "lint": "eslint src --fix --ext .ts"
+  },
+  "author": "Jeffrey",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanjinfeng/typer-text.git"
+  },
+  "keywords": [
+    "typer",
+    "auto-text",
+    "typer-text",
+    "auto-text"
+  ],
+  "bugs": {
+    "url": "https://github.com/zhanjinfeng/typer-text/issues"
+  },
+  "homepage": "https://github.com/zhanjinfeng/typer-text#readme"
+}

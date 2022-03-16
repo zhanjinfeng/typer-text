@@ -4,32 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TyperText Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
-    <h1 id="target"></h1>
-    <p id="target2"></p>
+    <div style="padding: 8rem 10rem;background-color: #7d6cf1;color: #fff;font-weight: 500;flex: 1;">
+        <p><span id="target"></span></p>
+        <p>开始下标为4. 不开启循环</p>
+    </div>
+
+    <div style="padding: 10rem;color: #c298f9;flex: 1;">
+        <p><span id="target2"></span></p>
+        <p>开始下标为2, 开启循环</p>
+    </div>
 </body>
+
+<script src="./dist/lib/index.browser.js"></script>
 
 
 <script type="module">
-    import a from './index.js';
 
     window.onload = () => {
-        const auto = new window.TextAutoInput({
+        const TyperText = window['typer-text']
+
+        const auto = new TyperText({
             el: '#target',
-            text: '这是一段自动输入的文本演示，还有更长的文本测试，还有更长的文本测试，还有更长的文本测试，还有更长的文本测试，还有更长的文本测试还有更长的文本测试，还有更长的文本测试还有更长的文本测试',
+            text: '实现打字机效果输入',
             loop: false,
-            speed: 300,
+            speed: 500,
+            fontSize: '60px',
+            color: '#fff',
+            startIndex: 4
         });
 
         auto.render();
 
-        const auto2 = new window.TextAutoInput({
+        const auto2 = new TyperText({
             el: '#target2',
-            text: 'This is a auto input text with testing',
-            loop: false,
-            speed: 2000,
+            text: 'typerText',
+            loop: true,
+            speed: 400,
+            fontSize: '60px',
+            color: '#c298f9',
+            startIndex: 2
         });
 
         auto2.render();

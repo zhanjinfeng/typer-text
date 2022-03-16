@@ -1,12 +1,44 @@
 {
-  "name": "text-auto-input",
-  "version": "1.0.0",
-  "type": "module",
-  "description": "",
-  "main": "index.js",
+  "name": "typer-text",
+  "version": "1.0.1",
+  "description": "A javascript library to render text as typer",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "lint": "eslint src --fix --ext .ts"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Jeffrey",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanjinfeng/typer-text.git"
+  },
+  "keywords": [
+    "typer",
+    "auto-text",
+    "typer-text",
+    "auto-text"
+  ],
+  "bugs": {
+    "url": "https://github.com/zhanjinfeng/typer-text/issues"
+  },
+  "homepage": "https://github.com/zhanjinfeng/typer-text#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "rollup": "^2.70.1",
+    "rollup-plugin-cleandir": "^2.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {}
 }
